@@ -1,0 +1,79 @@
+@import "@radix-ui/themes/styles.css";
+@import '@fontsource/merienda/index.css';
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Merienda:wght@300..900&display=swap');
+
+* {
+  font-family: 'Merienda', cursive;
+}
+
+:root {
+  --color-primary: #1A77A3;
+  --color-secondary: #eaeaea;
+  --color-tertiary: #f5f5f5;
+  --color-botton: #E8A342;
+  --color-background-1: #31343C;
+  --color-background-2: #222327;
+}
+
+/* Root container */
+.nav-root {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+/* Inner container for layout */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+/* Icon Section */
+.nav-icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-button svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-botton);
+}
+
+.icon-button:hover svg {
+  color: var(--color-primary);
+}
