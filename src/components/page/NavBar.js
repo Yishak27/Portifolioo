@@ -1,4 +1,4 @@
-import { Box, Button, Container, DataList, Grid, Link } from '@radix-ui/themes'
+import { Box, Button, Container, DataList, Grid, Link, Theme } from '@radix-ui/themes'
 import React from 'react'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
@@ -28,7 +28,7 @@ export default function NavBar() {
                 <div className="nav-icon">
                     <button className="icon-button">
                         <SunIcon onClick={toogleTheme}>
-                            {theme === 'light' ? <MoonIcon /> : <SunIcon />}
+                            {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
                         </SunIcon>
                     </button>
                 </div>

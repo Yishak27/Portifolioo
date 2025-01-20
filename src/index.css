@@ -17,8 +17,9 @@
 
 /* Root container */
 .nav-root {
-  width: 100%;
-  padding: 0.5rem 1rem;
+  width: 90%;
+  padding: 1rem 1rem;
+  margin: 3px 0px;
 }
 
 /* Inner container for layout */
@@ -76,4 +77,23 @@
 
 .icon-button:hover svg {
   color: var(--color-primary);
+}
+
+/* home container */
+
+.home-container {
+  margin: 1rem 2.5rem;
+}
+
+.profile {
+  padding: 4rem 1.5rem;
+}
+
+.avatar {
+  border-color: 2px solid var(--color-primary);
+  /* padding-left:1rem; */
+}
+
+.profile-list {
+  padding: 1rem;
 }
