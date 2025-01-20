@@ -1,12 +1,8 @@
-import { Separator } from '@radix-ui/themes';
+import { Box, Card, DataList, Flex, Grid, ScrollArea, Section, Separator, Text } from '@radix-ui/themes';
 import React from 'react';
-// import * as Separator from '@radix-ui/react-separator';
-// import './App.css'; // Add your styles here
-
-const SkillsAndExperience = () => {
+const SkillsAndExperiences = () => {
     return (
         <div className="skills-container">
-            {/* Skills Section */}
             <section className="skills-section">
                 <h2>Skill</h2>
                 <div className="skills-grid">
@@ -21,8 +17,6 @@ const SkillsAndExperience = () => {
                             <li>■ Bun</li>
                         </ul>
                     </div>
-
-                    {/* Frameworks */}
                     <div>
                         <h3>Framework</h3>
                         <ul>
@@ -95,5 +89,97 @@ const SkillsAndExperience = () => {
         </div>
     );
 };
+
+// export default SkillsAndExperience;
+
+const data = [{
+    "id": "01",
+    "category": "Programming Language",
+    "list": ["C#", "JavaScript", "Typescript", "Python", "Bun"]
+}, {
+    "id": "02",
+    "category": "Framework",
+    "list": ["Asp.net", ".net Web Api", "React Js", "Nodejs", "Expressjs", "Flask", "Nest js"]
+}, {
+    "id": "03",
+    "category": "Database",
+    "list": ["Ms Sql Server", "Postgres", "Mysql", "MongoDB", "Redis"]
+}, {
+    "id": "04",
+    "category": "Dev Tools and Deployment",
+    "list": ["Docker", "Postman", "Jmeter", "CI/CD", "Nginx", "Apache", "Visual Studio", "VsCode", "Web service", "Git & Github", "IIs"]
+}, {
+    "id": "05",
+    "category": "other",
+    "list": ["Communication", "Problem Solving", "SDLC", "Agile", "Temenos(T24)", "Customization (Moodle, Odoo)"]
+}];
+
+const experience = [{
+
+}]
+const SkillsAndExperience = () => {
+    return (<ScrollArea scrollbars='horizontal' className='scroll-area'>
+            <Text as='div' weight='bold' size={{ md: "6", sm: '5', xs: "4" }} 
+            mt={{ lg: "2", md: "3" }}>Skill</Text>           
+            <Grid columns={{ lg: "2", md: "2", sm: "1", xl: "1", xs: "1" }} gap='2'>
+                <DataList.Root m={{ lg: "1" }}>
+                    <Text as='div' size={{ lg: "4", md: "3", sm: "2" }}> {data[0].category}</Text>
+                    <DataList.Item>
+                        {data[0].list.map(items =>
+                            <Text key={items} size="2" ml={{ lg: '3' }}>■ {items}</Text>
+                        )}
+                    </DataList.Item>
+                </DataList.Root>
+
+                <DataList.Root m={{ lg: "2" }}>
+                    <Text as='div' size={{ lg: "5", md: "4", sm: "4" }} weight='bold'> {data[2].category}</Text>
+                    <DataList.Item>
+                        {data[2].list.map(items =>
+                            <Text key={items} size="2" ml={{ lg: '3' }}>■ {items}</Text>
+                        )}
+                    </DataList.Item>
+                </DataList.Root>
+
+                <DataList.Root m={{ lg: "2" }}>
+                    <Text as='div' size={{ lg: "5", md: "4", sm: "5" }} weight="bold"> {data[1].category}</Text>
+                    <DataList.Item>
+                        {data[1].list.map(items =>
+                            <Text key={items} size="2" ml={{ lg: '1' }}>■ {items}</Text>
+                        )}
+                    </DataList.Item>
+                </DataList.Root>
+
+                <DataList.Root m={{ lg: "2" }}>
+                    <Text as='div' size={{ lg: "5", md: "4", sm: "4" }} weight="bold"> {data[4].category}</Text>
+                    <DataList.Item>
+                        {data[4].list.map(items =>
+                            <Text key={items} size="2" ml={{ lg: '1' }}>■ {items}</Text>
+                        )}
+                    </DataList.Item>
+                </DataList.Root>
+            </Grid>
+            <Box>
+                <DataList.Root m={{ lg: "1" }}>
+                    <Text as='div' size={{ lg: "5", md: "3", sm: "4" }}> {data[3].category}</Text>
+                    <DataList.Item>
+                        {data[3].list.map(items =>
+                            <Text key={items} size="2" ml={{ lg: '1' }}>■ {items}</Text>
+                        )}
+                    </DataList.Item>
+                </DataList.Root>
+            </Box>
+            {/* Expiernce */}
+            <Separator style={{width:"auto"}} mt={{lg:"3",md:"2"}} mb={{lg:"2",md:"2"}}/>
+            <section className="experience-section">
+                <h2>Experience</h2>
+                <p>
+                    <strong>Full Time | Addis Abeba | Ethiopia</strong>
+                </p>
+                <p>Amhara Bank</p>
+                <p>2023 - Present</p>
+            </section>
+    </ScrollArea>
+    )
+}
 
 export default SkillsAndExperience;

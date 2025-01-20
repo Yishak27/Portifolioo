@@ -83,7 +83,7 @@ export const HomePage = () => {
                     </Grid>
                 </Container>
             </Box>
-            <Card>
+            <Card className='scroll-area' mt={{lg:"2",md:"1",sm:"1"}}>
                 <SkillsAndExperience />
             </Card>
         </Grid>
