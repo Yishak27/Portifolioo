@@ -1,16 +1,18 @@
-import { Avatar, Box, Card, Container, DataList, Flex, Grid, Separator, Text, ThickDividerHorizontalIcon } from '@radix-ui/themes'
+import { Avatar, Box, Card, Container, DataList, Flex, Grid, ScrollArea, Separator, Text, ThickDividerHorizontalIcon } from '@radix-ui/themes'
 import React from 'react'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import EmailIcon from '@mui/icons-material/Email';
 import SkillsAndExperience from './SkillsAndExperience';
+import ExperiencePage from './ExperiencePage';
 export const HomePage = () => {
     return (
-        <Grid columns={{ md: "2", sm: "1", lg: "2" }} gap={{ md: "1", sm: "0", lg: "2" }}
+        <Grid columns={{ md: "2", sm: "1", lg: "2" }} 
+        gap={{ md: "1", sm: "0", lg: "2" }}
             width={{ md: "auto", sm: "100%" }}>
             <Box>
                 <Container ml={{ lg: "5" }} mr={{ lg: "5" }}>
                     <Grid columns="1" rows="2">
-                        <Card m='2'>
+                        <Card m='1'>
                             <Flex>
                                 <Avatar
                                     size="8"
@@ -83,8 +85,10 @@ export const HomePage = () => {
                     </Grid>
                 </Container>
             </Box>
-            <Card className='scroll-area' mt={{lg:"2",md:"1",sm:"1"}}>
-                <SkillsAndExperience />
+            <Card mt={{ lg: "2", md: "1", sm: "1" }} className='cardskillandexperience'>
+                <ScrollArea scrollbars='vertical' className='h-10 bg-red-500'>
+                    <SkillsAndExperience />
+                </ScrollArea>
             </Card>
         </Grid>
     )

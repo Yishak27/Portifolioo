@@ -1,5 +1,5 @@
 
-import { Flex, Text, Button, Theme, ThickDividerHorizontalIcon } from "@radix-ui/themes";
+import { Flex, Text, Button, Theme, ThickDividerHorizontalIcon, Separator } from "@radix-ui/themes";
 import NavBar from "./components/page/NavBar";
 import { HomePage } from "./components/page/HomePage";
 import { Divider } from "@mui/material";
@@ -15,9 +15,10 @@ export default function App() {
       <NavBar />
       <Divider />
       <HomePage />
+      <Separator style={{ width: "100%" }} mt={{ lg: "3", md: "2", sm:"2", xs:"2", xl:"4" }} />
       <FooterPage />
       {/* <ScrollAreaDemo/> */}
-      </>
+    </>
   );
 }
 
