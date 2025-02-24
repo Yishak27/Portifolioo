@@ -4,6 +4,9 @@ import NavBar from "./components/page/NavBar";
 import { HomePage } from "./components/page/HomePage";
 import { Divider } from "@mui/material";
 import { FooterPage } from "./components/page/FooterPage";
+import { Route, Router, Routes } from "react-router-dom";
+import { ResumePage } from "./components/page/ResumePage";
+import { ScrollAreaDemo } from "./components/page/ScrollAreaDemo";
 // const { theme, toogleTheme } = useTheme();
 
 export default function App() {
@@ -13,7 +16,8 @@ export default function App() {
       <Divider />
       <HomePage />
       <FooterPage />
-    </>
+      {/* <ScrollAreaDemo/> */}
+      </>
   );
 }
 

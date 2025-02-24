@@ -120,10 +120,11 @@ const experience = [{
 const SkillsAndExperience = () => {
     return (<ScrollArea scrollbars='horizontal' className='scroll-area'>
             <Text as='div' weight='bold' size={{ md: "6", sm: '5', xs: "4" }} 
-            mt={{ lg: "2", md: "3" }}>Skill</Text>           
+            mt={{ lg: "2", md: "3" }}>Skill</Text>
+
             <Grid columns={{ lg: "2", md: "2", sm: "1", xl: "1", xs: "1" }} gap='2'>
-                <DataList.Root m={{ lg: "1" }}>
-                    <Text as='div' size={{ lg: "4", md: "3", sm: "2" }}> {data[0].category}</Text>
+                <DataList.Root m={{ lg: "-1" }}>
+                     <Text as='div' size={{ lg: "5" }} weight='bold'> {data[0].category}</Text>
                     <DataList.Item>
                         {data[0].list.map(items =>
                             <Text key={items} size="2" ml={{ lg: '3' }}>■ {items}</Text>
@@ -131,8 +132,10 @@ const SkillsAndExperience = () => {
                     </DataList.Item>
                 </DataList.Root>
 
-                <DataList.Root m={{ lg: "2" }}>
-                    <Text as='div' size={{ lg: "5", md: "4", sm: "4" }} weight='bold'> {data[2].category}</Text>
+                <DataList.Root m={{lg: "2"}}>
+                    <Text as='div' 
+                    size={{ lg: "5"}}
+                     weight='bold'> {data[2].category}</Text>
                     <DataList.Item>
                         {data[2].list.map(items =>
                             <Text key={items} size="2" ml={{ lg: '3' }}>■ {items}</Text>
@@ -141,7 +144,7 @@ const SkillsAndExperience = () => {
                 </DataList.Root>
 
                 <DataList.Root m={{ lg: "2" }}>
-                    <Text as='div' size={{ lg: "5", md: "4", sm: "5" }} weight="bold"> {data[1].category}</Text>
+                    <Text as='div' size={{ lg: "5"}} weight="bold"> {data[1].category}</Text>
                     <DataList.Item>
                         {data[1].list.map(items =>
                             <Text key={items} size="2" ml={{ lg: '1' }}>■ {items}</Text>
@@ -150,7 +153,7 @@ const SkillsAndExperience = () => {
                 </DataList.Root>
 
                 <DataList.Root m={{ lg: "2" }}>
-                    <Text as='div' size={{ lg: "5", md: "4", sm: "4" }} weight="bold"> {data[4].category}</Text>
+                    <Text as='div' size={{ lg: "5"}} weight="bold"> {data[4].category}</Text>
                     <DataList.Item>
                         {data[4].list.map(items =>
                             <Text key={items} size="2" ml={{ lg: '1' }}>■ {items}</Text>
@@ -160,7 +163,7 @@ const SkillsAndExperience = () => {
             </Grid>
             <Box>
                 <DataList.Root m={{ lg: "1" }}>
-                    <Text as='div' size={{ lg: "5", md: "3", sm: "4" }}> {data[3].category}</Text>
+                    <Text as='div' size={{ lg: "5", md: "3", sm: "4" }} weight='bold'> {data[3].category}</Text>
                     <DataList.Item>
                         {data[3].list.map(items =>
                             <Text key={items} size="2" ml={{ lg: '1' }}>■ {items}</Text>
