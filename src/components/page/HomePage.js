@@ -37,13 +37,14 @@ export const HomePage = () => {
                                 <DataList.Item align="center" style={{ marginLeft: 10 }}>
                                     <DataList.Label>
                                         <PhoneIphoneIcon style={{ marginRight: "10" }} />
-                                        +251924193077 / +251704609775
+                                       <a href='tel:251924193077'>+251924193077 </a>  /
+                                       <a href='tel: +251704609775'> +251704609775</a>
                                     </DataList.Label>
                                 </DataList.Item>
                                 <DataList.Item align="center" style={{ marginLeft: 10 }}>
                                     <DataList.Label>
                                         <EmailIcon style={{ marginRight: "10" }} />
-                                        Yisumaid3@gmail.com
+                                        <a href='inbox@ermiyas.dev'>inbox@ermiyas.dev</a>
                                     </DataList.Label>
                                 </DataList.Item>
                             </DataList.Root>
