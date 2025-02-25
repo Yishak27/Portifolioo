@@ -11,14 +11,14 @@ import { ScrollAreaDemo } from "./components/page/ScrollAreaDemo";
 
 export default function App() {
   return (
-    <>
+    <div onContextMenu={(e) => e.preventDefault()} className="App">
       <NavBar />
       <Divider />
       <HomePage />
       <Separator style={{ width: "100%" }} mt={{ lg: "3", md: "2", sm:"2", xs:"2", xl:"4" }} />
       <FooterPage />
       {/* <ScrollAreaDemo/> */}
-    </>
+    </div>
   );
 }
 
