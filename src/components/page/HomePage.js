@@ -6,13 +6,14 @@ import SkillsAndExperience from './SkillsAndExperience';
 import ExperiencePage from './ExperiencePage';
 export const HomePage = () => {
     return (
-        <Grid columns={{ md: "2", sm: "1", lg: "2" }} 
-        gap={{ md: "1", sm: "0", lg: "2" }}
+        <Grid columns={{ md: "2", sm: "1", lg: "2" }}
+            gap={{ md: "1", sm: "0", lg: "2" }}
             width={{ md: "auto", sm: "100%" }}>
             <Box>
                 <Container ml={{ lg: "5" }} mr={{ lg: "5" }}>
                     <Grid columns="1" rows="2">
-                        <Card m='1'>
+                        <Card mt={{ lg: "2", md: "1", sm: "1" }} mb={{ lg: "2", md: "1", sm: "1", xl: "2", xs: "1" }}
+                            className='h-auto'>
                             <Flex>
                                 <Avatar
                                     size="8"
@@ -32,22 +33,24 @@ export const HomePage = () => {
                                     </Text>
                                 </DataList.Item>
                             </DataList.Root>
-                            <Separator style={{ width: "auto" }} mb="4" />
-                            <DataList.Root>
-                                <DataList.Item align="center" style={{ marginLeft: 10 }}>
-                                    <DataList.Label>
-                                        <PhoneIphoneIcon style={{ marginRight: "10" }} />
-                                       <a href='tel:251924193077'>+251924193077 </a>  /
-                                       <a href='tel: +251704609775'> +251704609775</a>
-                                    </DataList.Label>
-                                </DataList.Item>
-                                <DataList.Item align="center" style={{ marginLeft: 10 }}>
-                                    <DataList.Label>
-                                        <EmailIcon style={{ marginRight: "10" }} />
-                                        <a href='inbox@ermiyas.dev'>inbox@ermiyas.dev</a>
-                                    </DataList.Label>
-                                </DataList.Item>
-                            </DataList.Root>
+                            <Separator style={{ width: "auto" }} mb="5" />
+                            <div className='m-auto'>
+                                <DataList.Root>
+                                    <DataList.Item align="center" style={{ marginLeft: 10, }}>
+                                        <DataList.Label>
+                                            <PhoneIphoneIcon style={{ marginRight: "10" }} />
+                                            <a href='tel:251924193077'>+251924193077 </a>  /
+                                            <a href='tel: +251704609775'> +251704609775</a>
+                                        </DataList.Label>
+                                    </DataList.Item>
+                                    <DataList.Item align="center" style={{ marginLeft: 10 }}>
+                                        <DataList.Label>
+                                            <EmailIcon style={{ marginRight: "10" }} />
+                                            <a href='inbox@ermiyas.dev'>inbox@ermiyas.dev</a>
+                                        </DataList.Label>
+                                    </DataList.Item>
+                                </DataList.Root>
+                            </div>
                         </Card>
                         <Card className='about'>
                             <Flex m='3'>
