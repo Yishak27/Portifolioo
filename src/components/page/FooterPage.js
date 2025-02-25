@@ -7,9 +7,9 @@ export const FooterPage = () => {
     const [dateNow, setDate] = useState(moment().format('YYYY'));
     return (
         <Box m={{ md: "3", lg: "3", sm: "3", xs: "3", xl: "3" }} className='w-full'>
-            <DataList.Root className='footer-menu border-spacing-8'>
+            <DataList.Root className='footer-menu border-spacing-8 pl-32'>
                 <DataList.Label>
-                    <Text className='text-center' >{dateNow} G.c
+                    <Text className='text-center' style={{paddingLeft:25}} >{dateNow} G.c
                         {/* <Copyright /> */}
                     </Text></DataList.Label>
             </DataList.Root>

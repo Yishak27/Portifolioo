@@ -4,6 +4,8 @@ import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import EmailIcon from '@mui/icons-material/Email';
 import SkillsAndExperience from './SkillsAndExperience';
 import ExperiencePage from './ExperiencePage';
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import { Link2 } from 'lucide-react';
 export const HomePage = () => {
     return (
         <Grid columns={{ md: "2", sm: "1", lg: "2" }}
@@ -35,22 +37,29 @@ export const HomePage = () => {
                             </DataList.Root>
                             <Separator style={{ width: "auto" }} mb="5" />
                             <div className='m-auto'>
-                                <DataList.Root>
+                                <DataList.Root className='w-full'>
                                     <DataList.Item align="center" style={{ marginLeft: 10, }}>
                                         <DataList.Label>
                                             <PhoneIphoneIcon style={{ marginRight: "10" }} />
-                                            <a href='tel:251924193077'>+251924193077 </a>  /
-                                            <a href='tel: +251704609775'> +251704609775</a>
+                                            <a href='tel:251924193077' style={{textDecoration:"none", paddingRight:10}}>+251924193077 </a>  /
+                                            <a href='tel: +251704609775' style={{textDecoration:"none",paddingLeft:10}}> +251704609775</a>
                                         </DataList.Label>
                                     </DataList.Item>
                                     <DataList.Item align="center" style={{ marginLeft: 10 }}>
                                         <DataList.Label>
                                             <EmailIcon style={{ marginRight: "10" }} />
-                                            <a href='inbox@ermiyas.dev'>inbox@ermiyas.dev</a>
+                                            <a href='inbox@ermiyas.dev' style={{textDecoration:"none"}}>inbox@ermiyas.dev</a>
+                                        </DataList.Label>
+                                    </DataList.Item>
+                                    <DataList.Item align="center" style={{ marginLeft: 10 }}>
+                                        <DataList.Label>
+                                          <Link2 style={{ marginRight: "10" }} className='align-middle'></Link2>
+                                          <a href='/resume' className='text-pretty' style={{textDecoration:"none"}}>Download CV</a>
                                         </DataList.Label>
                                     </DataList.Item>
                                 </DataList.Root>
                             </div>
+                            
                         </Card>
                         <Card className='about'>
                             <Flex m='3'>
@@ -89,7 +98,7 @@ export const HomePage = () => {
                     </Grid>
                 </Container>
             </Box>
-            <Card mt={{ lg: "2", md: "1", sm: "1" }} className='cardskillandexperience'>
+            <Card mt={{ lg: "2", md: "1", sm: "1", xl:"1" , xs:"1"}} className='cardskillandexperience'>
                 <ScrollArea scrollbars='vertical' className='h-10 bg-red-500'>
                     <SkillsAndExperience />
                 </ScrollArea>

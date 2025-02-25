@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Theme appearance='dark'>
+    <Theme appearance='inherit'>
       <BrowserRouter>
         {/* <Router> */}
         <Routes>
