@@ -29,8 +29,8 @@ export const FooterPage = () => {
                     </svg>
                 </a>
                 {/* Medium */}
-                <a href="https://medium.com/@ermiyasdamte" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-botton)] transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+                <a href="https://medium.com/@ermiyasdamte" target="_blank" rel="noopener noreferrer"  className="hover:text-[var(--color-botton)] transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M2 7.01c.01-.17.09-.33.24-.43L4.91 4.06v-.5h6.94l5.36 11.7 4.72-11.7H22v.5l-1.93 1.85c-.17.13-.26.33-.23.54v12.9c-.03.2.06.4.23.54L22 21.44v.5h-7.03v-.5l2.02-1.96c.2-.2.2-.25.2-.54V7.99l-5.62 14.48h-.76L6.25 7.99v9.95c-.06.4.08.8.37 1.08l2.63 3.4v.5H2v-.5l2.63-3.4c.27-.29.4-.68.35-1.08V7.01z" />
                     </svg>
                 </a>
