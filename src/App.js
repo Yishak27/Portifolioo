@@ -20,8 +20,8 @@ export default function App() {
           <>
             <HomePage />
             <ExperiencePage />
-            <ProjectsPage />
             <SkillsPage />
+            <ProjectsPage />
           </>
         } />
         <Route path="/projects/:id" element={<ProjectDetailPage />} />
