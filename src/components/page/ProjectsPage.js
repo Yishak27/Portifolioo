@@ -9,17 +9,17 @@ const projectCategories = [
     projects: [
       {
         id: '1',
-        title: 'Banking App',
-        description: 'A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.',
-        image: '/logo.jpg',
-        tech: ['React', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
+        title: 'Speech Recognition',
+        description: 'Amharic speech recognition convert amharic voice to text. which is open source any one can participate.',
+        image: '/speech.jpg',
+        tech: ['React', 'Flask', 'PostgreSQL', 'Material UI','Voice model'],
       },
       {
         id: '2',
         title: 'Portfolio Website',
         description: 'A personal portfolio to showcase my work and skills.',
-        image: '/logo.jpg',
-        tech: ['React', 'Tailwind CSS'],
+        image: '/port.png',
+        tech: ['React','Firebase', 'Tailwind CSS'],
       },
     ],
   },
@@ -30,10 +30,17 @@ const projectCategories = [
     projects: [
       {
         id: '3',
-        title: 'E-commerce Platform',
-        description: 'A scalable e-commerce solution with payment integration.',
-        image: '/logo.jpg',
-        tech: ['Next.js', 'MongoDB', 'Stripe'],
+        title: 'E-commerce',
+        description: 'A multi tenant based ecommerce backend.',
+        image: '/ecommerce.png',
+        tech: ['Node js','Express js','Redis','Postgresql','BullMQ','Microservice','Arif pay', 'MongoDB'],
+      },
+      {
+        id: '5',
+        title: 'Online Vacancy',
+        description: 'A vacancy system with dashboard. Where the company publish vacancy and applicant easly apply on open vacancy',
+        image: '/vacnay_1.png',
+        tech: ['Node js','Express js','Postgresql','Microservice', 'MongoDB'],
       },
     ],
   },
@@ -46,8 +53,8 @@ const projectCategories = [
         id: '4',
         title: 'Mobile Banking App Redesign',
         description: 'Redesigned the mobile banking app for a seamless and modern user experience.',
-        image: '/logo.jpg',
-        tech: ['Figma', 'Adobe XD', 'User Research'],
+        image: '/mb_kokeb.png',
+        tech: ['Figma', 'UX research', 'User Research'],
       },
     ],
   },
@@ -85,9 +92,11 @@ export default function ProjectsPage() {
             }`}
           >
             {cat.projects.map((project) => (
-              <div key={project.id} className="bg-gradient-to-br from-[var(--color-background-2)] rounded-2xl overflow-hidden flex flex-col md:flex-row items-stretch border-gray-50">
-                <img src={project.image} alt={project.title} className="w-full md:w-48 h-24 md:h-auto object-cover" />
-                <div className="flex-1 flex flex-col justify-between p-6">
+              <div key={project.id} className="bg-gradient-to-br from-[var(--color-background-2)] rounded overflow-hidden flex flex-col md:flex-row items-stretch border-gray-400 ">
+                <div className="w-full md:w-48 h-40 md:h-auto border flex-shrink-0">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-t-2xl md:rounded-t-none md:rounded-l" />
+                </div>
+                <div className="flex-1 flex flex-col justify-between ml-1 border-[var(--color-tertiary)] border p-6">
                   <div className="flex flex-col gap-2">
                     <h4 className="text-2xl font-bold text-[var(--color-primary)]">{project.title}</h4>
                     <p className="text-base text-gray-500 mb-2 min-h-[3.5rem] line-clamp-3 overflow-hidden">{project.description}</p>
@@ -97,9 +106,9 @@ export default function ProjectsPage() {
                       ))}
                     </div>
                   </div>
-                  <div className="flex justify-end mt-2">
+                  {/* <div className="flex justify-end mt-2">
                     <Link to={`/projects/${project.id}`} className="px-4 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors">View Details</Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

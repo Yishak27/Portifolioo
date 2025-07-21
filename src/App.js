@@ -20,7 +20,7 @@ export default function App() {
       <ExperiencePage />
       <SkillsPage />
       <ProjectsPage />
-      <Separator style={{ width: "100%" }} mt={{ lg: "3", md: "2", sm: "2", xs: "2", xl: "4" }} />
+      <Separator style={{ width: "100%" }} mt={{ lg: "3", md: "2", sm: "2", xs: "2", xl: "4" }} />      
       <FooterPage />
     </div>
   );

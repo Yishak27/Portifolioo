@@ -8,7 +8,7 @@ export const HomePage = () => {
                 <div className="flex-shrink-0 flex items-center justify-center">
                     <img src="/photo.jpg" alt="Ermiyas Damte" className="rounded-full w-40 h-40 object-cover border-4 border-[var(--color-primary)] shadow-lg" />
                 </div>
-                <div className="bg-gradient-to-br  rounded-2xl  p-8 flex flex-col gap-6 w-full max-w-xl border">
+                <div className="bg-gradient-to-br  rounded-2xl  p-8 flex flex-col gap-6 w-full max-w-xl">
                     <p className="text-xl md:text-2xl text-[var(--color-primary)]">
                         Hi! I’m Ermiyas <span role="img" aria-label="wave">👋</span><br/>
                         <span className="block mt-2 font-extrabold text-xl md:text-xl">Fullstack Developer & UI/UX Designer</span>
