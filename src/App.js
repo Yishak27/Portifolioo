@@ -19,8 +19,8 @@ export default function App() {
         <Route path="/" element={
           <>
             <HomePage />
-            <ProjectsPage />
             <ExperiencePage />
+            <ProjectsPage />
             <SkillsPage />
           </>
         } />
