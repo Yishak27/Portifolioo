@@ -4,13 +4,11 @@
 
 @import "@radix-ui/themes/styles.css";
 @import '@fontsource/merienda/index.css';
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Merienda:wght@300..900/* &display=swap');
 
 * {
-  font-family: 'Ubuntu', sans-serif;
-  /* cursor: pointer; 
-body{  cursor: url('https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop'), auto;
-} */
+  font-family: 'Merienda', cursive;
+  cursor: pointer; 
 }
 
 

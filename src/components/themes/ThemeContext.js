@@ -5,12 +5,18 @@ const ThemeContext = createContext({
 });
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+    const getDefaultTheme = () => {
+        const stored = localStorage.getItem('theme');
+        if (stored) return stored;
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark';
+        }
+        return 'dark';
+    };
+    const [theme, setTheme] = useState(getDefaultTheme);
 
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
-        console.log('theme selection', theme);
-        
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme);
     };
@@ -26,5 +32,4 @@ export const ThemeProvider = ({ children }) => {
     );
 };
 
-// Custom hook to use ThemeContext
 export const useTheme = () => useContext(ThemeContext);
