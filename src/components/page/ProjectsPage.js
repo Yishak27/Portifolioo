@@ -10,7 +10,7 @@ const projectCategories = [
       {
         id: '1',
         title: 'Banking App',
-        description: 'A modern banking platform with real-time notifications and analytics.',
+        description: 'A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.A modern banking platform with real-time notifications and analytics.',
         image: '/logo.jpg',
         tech: ['React', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
       },
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
                 <div className="flex-1 flex flex-col justify-between p-6">
                   <div className="flex flex-col gap-2">
                     <h4 className="text-2xl font-bold text-[var(--color-primary)]">{project.title}</h4>
-                    <p className="text-base text-gray-300 mb-2">{project.description}</p>
+                    <p className="text-base text-gray-500 mb-2 min-h-[3.5rem] line-clamp-3 overflow-hidden">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
                         <span key={tech} className="px-3 py-1 rounded-full bg-[var(--color-botton)] text-white text-xs font-medium shadow">{tech}</span>
