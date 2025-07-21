@@ -2,25 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import "@radix-ui/themes/styles.css";
-import { Theme } from '@radix-ui/themes';
 import { ResumePage } from './components/page/ResumePage';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from './components/themes/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Theme appearance='light'>
+    <ThemeProvider>
       <BrowserRouter>
-        {/* <Router> */}
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path='*' element="Not found" />
         </Routes>
-        {/* </Router> */}
       </BrowserRouter>
-    </Theme>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
