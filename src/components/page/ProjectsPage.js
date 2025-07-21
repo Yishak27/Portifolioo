@@ -64,7 +64,7 @@ export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState(projectCategories[0].id);
 
   return (
-    <section className="min-h-[40vh] flex flex-col items-center justify-center pb-10">
+    <section className="min-h-[40vh] flex flex-col items-center justify-center pb-10 overflow-x-hidden">
       <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Projects</h2>      
       <div className="flex flex-wrap justify-center gap-4 mb-10 max-w-4xl">
         {projectCategories.map((cat) => (
@@ -93,10 +93,10 @@ export default function ProjectsPage() {
           >
             {cat.projects.map((project) => (
               <div key={project.id} className="bg-gradient-to-br from-[var(--color-background-2)] rounded overflow-hidden flex flex-col md:flex-row items-stretch border-gray-400 ">
-                <div className="w-full md:w-48 h-40 md:h-auto border flex-shrink-0">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-t-2xl md:rounded-t-none md:rounded-l" />
+                <div className="md:w-48 w-full h-40 md:h-auto flex-shrink-0">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-t-2xl md:rounded-t-none md:rounded-l-2xl" />
                 </div>
-                <div className="flex-1 flex flex-col justify-between ml-1 border-[var(--color-tertiary)] border p-6">
+                <div className="flex-1 flex flex-col justify-between md:ml-4 ml-0 border-[var(--color-tertiary)] border p-4 min-w-0">
                   <div className="flex flex-col gap-2">
                     <h4 className="text-2xl font-bold text-[var(--color-primary)]">{project.title}</h4>
                     <p className="text-base text-gray-500 mb-2 min-h-[3.5rem] line-clamp-3 overflow-hidden">{project.description}</p>

@@ -42,16 +42,9 @@
   background: #fff;
 }
 
-body, html {
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-background-1);
-  color: var(--color-primary);
+body, html, #root {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
 }
 
 .App {
