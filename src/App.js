@@ -10,8 +10,24 @@ import ProjectDetailPage from "./components/page/ProjectDetailPage";
 import ExperiencePage from "./components/page/ExperiencePage";
 import SkillsPage from "./components/page/SkillsPage";
 import ErrorPage from "./components/page/ErrorPage";
+import ContactPage from "./components/page/ContactPage";
+import { useEffect, useState } from 'react';
 
 export default function App() {
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div onContextMenu={(e) => e.preventDefault()} className="App">
       <NavBar />
@@ -20,7 +36,17 @@ export default function App() {
       <ExperiencePage />
       <SkillsPage />
       <ProjectsPage />
-      <Separator style={{ width: "100%" }} mt={{ lg: "3", md: "2", sm: "2", xs: "2", xl: "4" }} />      
+      <ContactPage />
+      {showTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-[var(--color-primary)] text-white shadow-lg hover:bg-[var(--color-botton)] transition-colors"
+          aria-label="Back to top"
+        >
+          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+        </button>
+      )}
+      <Separator style={{ width: "100%" }} mt={{ lg: "3", md: "2", sm: "2", xs: "2", xl: "4" }} />
       <FooterPage />
     </div>
   );
