@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const HomePage = () => {
     return (
-        <section className="w-full min-h-[70vh] flex flex-col items-center justify-center px-4 py-12">
+        <section className="w-full min-h-[55vh] flex flex-col items-center justify-center px-4 py-12">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-7xl">
                 <div className="flex-shrink-0 flex items-center justify-center">
                     <img src="/photo.jpg" alt="Ermiyas Damte" className="rounded-full w-40 h-40 object-cover border-4 border-[var(--color-primary)] shadow-lg" />
