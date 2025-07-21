@@ -13,7 +13,7 @@ export const FooterPage = () => {
                 <span className="text-base font-light">&copy; {year} G.C</span>
             </div>
             <div className="mt-2 flex gap-4 items-center justify-center">
-                <a href="https://www.linkedin.com/in/ermiyas-damte" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-botton)] transition-colors">
+                <a href="https://www.linkedin.com/in/ermiyas-damte/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-botton)] transition-colors">
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z" /></svg>
                 </a>
                 <a href="mailto:inbox@ermiyas.dev" className="hover:text-[var(--color-botton)] transition-colors">
@@ -23,7 +23,7 @@ export const FooterPage = () => {
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.218.694.825.576 4.765-1.587 8.199-6.084 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
                 </a>
                 {/* Upwork */}
-                <a href="https://www.upwork.com/freelancers/ermiyasdamte" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-botton)] transition-colors">
+                <a href="https://www.upwork.com/freelancers/~017147ca1bf5d8c2e4" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-botton)] transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#6fda44">
                         <path d="M19.74 8.74c-1.07 0-2.01.46-2.73 1.19a6.373 6.373 0 0 0-1.66-3.62l-1.08 3.52c.38.69.61 1.48.65 2.3a4.386 4.386 0 0 1-2.67 4.17 4.396 4.396 0 0 1-5.97-3.21c-.14-.7-.17-1.45-.18-2.21V5H3.24v5.95c0 .96.05 1.91.21 2.85a6.563 6.563 0 0 0 4.4 5.2 6.453 6.453 0 0 0 6.87-1.69 6.43 6.43 0 0 0 1.71-3.83 2.275 2.275 0 0 1 3.27-1.87l.61.31.77-1.88-.52-.3a4.424 4.424 0 0 0-2.42-.72z" />
                     </svg>
