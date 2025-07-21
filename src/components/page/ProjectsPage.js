@@ -57,16 +57,14 @@ export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState(projectCategories[0].id);
 
   return (
-    <section className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 py-12">
-      <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Projects</h2>
-      
-      {/* Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-10 w-full max-w-4xl">
+    <section className="min-h-[40vh] flex flex-col items-center justify-center pb-10">
+      <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Projects</h2>      
+      <div className="flex flex-wrap justify-center gap-4 mb-10 max-w-4xl">
         {projectCategories.map((cat) => (
           <button
             key={cat.id}
             onClick={() => setActiveTab(cat.id)}
-            className={`flex items-center gap-2 px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-300 ${
+            className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
               activeTab === cat.id
                 ? 'bg-[var(--color-primary)] text-[var(--color-secondary)] shadow-lg scale-105'
                 : 'bg-[var(--color-secondary)] text-[var(--color-primary)] hover:bg-[var(--color-background-2)] hover:scale-105'
@@ -78,7 +76,6 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      {/* Projects */}
       <div className="w-full max-w-4xl">
         {projectCategories.map((cat) => (
           <div

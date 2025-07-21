@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
 const projectDetails = {
   '1': {
@@ -32,11 +32,26 @@ const projectDetails = {
       { label: 'GitHub', url: '#' },
     ],
   },
+  '4': {
+    title: 'Mobile Banking App Redesign',
+    description: 'Redesigned the mobile banking app for a seamless and modern user experience.',
+    image: '/logo.jpg',
+    tech: ['Figma', 'Adobe XD', 'User Research'],
+    links: [
+      { label: 'Figma', url: '#' },
+    ],
+  },
 };
+
+const projectOrder = ['1', '2', '3', '4'];
 
 export default function ProjectDetailPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const project = projectDetails[id];
+  const idx = projectOrder.indexOf(id);
+  const prevId = idx > 0 ? projectOrder[idx - 1] : null;
+  const nextId = idx < projectOrder.length - 1 ? projectOrder[idx + 1] : null;
 
   if (!project) {
     return <div className="text-center py-20 text-2xl">Project not found.</div>;
@@ -44,21 +59,45 @@ export default function ProjectDetailPage() {
 
   return (
     <section className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 py-12">
-      <div className="w-full max-w-3xl bg-[var(--color-background-2)] rounded-xl shadow-lg p-8 flex flex-col gap-6">
-        <img src={project.image} alt={project.title} className="w-full h-56 object-cover rounded-lg mb-4" />
-        <h2 className="text-3xl font-bold text-[var(--color-primary)]">{project.title}</h2>
-        <p className="text-lg text-[var(--color-primary)]">{project.description}</p>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {project.tech.map((tech) => (
-            <span key={tech} className="px-3 py-1 rounded-full bg-[var(--color-primary)] text-white text-sm font-medium">{tech}</span>
-          ))}
+      <div className="w-full max-w-3xl bg-gradient-to-br from-[var(--color-background-2)] rounded-2xl shadow-2xl p-0 flex flex-col overflow-hidden">
+        {/* Back Button */}
+        <button onClick={() => navigate(-1)} className="flex items-center gap-2 px-4 py-2 m-4 rounded-lg bg-[var(--color-primary)] text-[var(--color-secondary)] font-semibold hover:bg-[var(--color-botton)] transition-colors w-fit">
+          <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          Back
+        </button>
+        {/* Project Image */}
+        <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
+        <div className="p-8 flex flex-col gap-4">
+          <h2 className="text-3xl font-bold text-[var(--color-primary)]">{project.title}</h2>
+          <p className="text-lg text-gray-300">{project.description}</p>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {project.tech.map((tech) => (
+              <span key={tech} className="px-3 py-1 rounded-full bg-[var(--color-botton)] text-white text-xs font-medium shadow">{tech}</span>
+            ))}
+          </div>
+          <div className="flex gap-4 mt-4">
+            {project.links.map((link) => (
+              <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors">{link.label}</a>
+            ))}
+          </div>
+          {/* Navigation Buttons */}
+          <div className="flex justify-between mt-8">
+            <button
+              onClick={() => prevId && navigate(`/projects/${prevId}`)}
+              disabled={!prevId}
+              className={`px-4 py-2 rounded-lg border-2 font-semibold transition-colors ${prevId ? 'border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white' : 'border-gray-700 text-gray-500 cursor-not-allowed'}`}
+            >
+              ← Previous
+            </button>
+            <button
+              onClick={() => nextId && navigate(`/projects/${nextId}`)}
+              disabled={!nextId}
+              className={`px-4 py-2 rounded-lg border-2 font-semibold transition-colors ${nextId ? 'border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white' : 'border-gray-700 text-gray-500 cursor-not-allowed'}`}
+            >
+              Next →
+            </button>
+          </div>
         </div>
-        <div className="flex gap-4 mt-4">
-          {project.links.map((link) => (
-            <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md border border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors">{link.label}</a>
-          ))}
-        </div>
-        <Link to="/projects" className="mt-6 text-[var(--color-botton)] hover:underline">← Back to Projects</Link>
       </div>
     </section>
   );

@@ -9,26 +9,27 @@ const experiences = [
     location: 'Addis Ababa, Ethiopia',
     highlights: [
       `Mobile Banking Application Development & Maintenance
-, Developed and maintained a secure and scalable mobile banking
-application. `,
+ , Developed and maintained a secure and scalable mobile banking
+ application. `,
       `Merchant Application & Dashboard Development
-, Built a merchant application for seamless transactions, order
-management, and financial tracking.`,
+ , Built a merchant application for seamless transactions, order
+ management, and financial tracking.`,
       `Shareholder Application & Dashboard Development.
-,Designed and implemented a shareholder management
-application.`,
+ ,Designed and implemented a shareholder management
+ application.`,
       `Third-Party Integrations
-, Integrated external APIs and services into banking and financial
-applications.`,
+ , Integrated external APIs and services into banking and financial
+ applications.`,
       `Utility Service Solutions
-, Develop different utility application like emailing service, sms
-service`,
+ , Develop different utility application like emailing service, sms
+ service`,
       `Development of Various Applications
-, Worked on multiple applications, including ERP systems, internal
-banking tools, and self-service platforms.
-, Built APIs and microservices to support different banking and
-financial operations.`,
+ , Worked on multiple applications, including ERP systems, internal
+ banking tools, and self-service platforms.
+ , Built APIs and microservices to support different banking and
+ financial operations.`,
     ],
+    description: "",
   },
   {
     id: 2,
@@ -48,8 +49,8 @@ financial operations.`,
       'Collaborated on stages of software development lifecycle from requirement gathering to production releases',
       'Coordinated with project management on database development timelines and deploying to production environment'
     ],
+    description: '',
   },
-
   {
     id: 3,
     role: 'Information technology officer ',
@@ -61,34 +62,40 @@ financial operations.`,
       'Developed in house systems and other system which the bank uses currently like External and internal vacancy system, Stock management system, staff self-service system and other internal services',
       'By making a good contribution to those and other system`s I got appreciation certificate from the bank CEO'
     ],
+    description: '',
   },
 ];
 
 export default function ExperiencePage() {
   return (
-    <section className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 py-12">
+    <section className="w-full min-h-[60vh] flex flex-col items-center justify-center">
       <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Experience</h2>
       <div className="relative w-full max-w-3xl">
-        {/* Timeline vertical line */}
-        <div className="hidden md:block left-1/2 top-0 h-full w-1 bg-gradient-to-b from-[var(--color-primary)]/60  z-0" style={{ transform: 'translateX(-50%)' }}></div>
-        <div className="flex flex-col gap-12 z-10">
+        <div className="absolute left-8 top-5 h-full border-l-2 border-dashed border-gray-300 z-0" />
+        <div className="flex flex-col gap-16 relative z-10">
           {experiences.map((exp, idx) => (
-            <div key={exp.id} className={`flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-0 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-              {/* Timeline dot */}
-              <div className="hidden md:flex flex-col items-center w-1 relative">
-                <span className="w-6 h-6 rounded-full bg-[var(--color-botton)] border-4 border-white shadow-lg animate-bounce" style={{ marginTop: idx === 0 ? 0 : '2rem' }}></span>
-                {idx < experiences.length - 1 && <div className="flex-1 w-1 bg-gradient-to-b from-[var(--color-botton)]/60 to-transparent"></div>}
+            <div key={exp.id} className="grid flex-row md:gap-2 relative">
+              <div className="items-center mb-0  min-w-[10px] md:min-w-[100px]">
+                <span className="bg-white text-gray-700 border border-gray-300 rounded-full px-3 py-1 text-xs md:text-sm font-semibold shadow mb-2 mt-1 whitespace-nowrap z-10">
+                  {exp.date}
+                </span>
+                <div className="w-0.5 flex-1 bg-gray-700" />
               </div>
-              {/* Card */}
-              <div className="flex-1 bg-white/10 backdrop-blur-md border border-gray-100 rounded-2xl p-8 transition-transform hover:scale-[1.025] duration-300">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                  <h3 className="text-2xl font-bold text-[var(--color-primary)]">{exp.role}</h3>
-                  <span className="text-base font-semibold text-[var(--color-botton)] mt-2 md:mt-0">{exp.company}</span>
+              <div className="flex-1 ml-20 rounded-2xl p-4 md:p-6 border border-[var(--color-secondary)] mt-2">
+                <div className="flex items-center gap-3 md:gap-4 mb-2">
+                  {exp.logo && <img src={exp.logo} alt={exp.company} className="w-10 h-10 md:w-10 md:h-12 object-contain rounded bg-white p-1 border border-[var(--color-secondary)]" />}
+                  <div>
+                    <div className="text-base md:text-lg font-bold text-[var(--color-primary)]">{exp.role}</div>
+                    <div className="text-sm md:text-base font-semibold text-[var(--color-botton)]">@{exp.company}</div>
+                  </div>
                 </div>
-                <div className="text-sm text-gray-400 mb-4">{exp.date}</div>
-                <ul className="list-disc ml-6 text-[var(--color-primary)] space-y-1">
+                {exp.description && <div className="text-[var(--color-primary)] mb-2 text-xs md:text-sm">{exp.description}</div>}
+                <ul className="list-none pl-0 text-[var(--color-primary)] text-xs md:text-sm space-y-1">
                   {exp.highlights.map((item, idx) => (
-                    <li key={idx}>{item}</li>
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-lg text-[var(--color-botton)] mt-0.5">›</span>
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
