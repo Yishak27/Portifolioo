@@ -9,7 +9,7 @@ export default function NavBar() {
 
     return (
         <nav className="w-full flex justify-center items-center py-2 bg-transparent">
-            <div className="w-full max-w-xl flex justify-between items-center relative px-4">
+            <div className="w-full max-w-3xl flex justify-between items-center relative px-4">
                 <div className="flex-shrink-0">
                     <a href="/" className="font-bold text-2xl md:text-3xl">Ermiyas.dev</a>
                 </div>

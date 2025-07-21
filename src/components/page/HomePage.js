@@ -4,13 +4,10 @@ import { Link } from 'react-router-dom';
 export const HomePage = () => {
     return (
         <section className="w-full min-h-[70vh] flex flex-col items-center justify-center px-4 py-12">
-            {/* <h1 className="text-4xl md:text-6xl font-bold text-[var(--color-primary)] mb-10 text-center">Ermiyas Damte.</h1> */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-3xl">
-                {/* Profile Image */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-7xl">
                 <div className="flex-shrink-0 flex items-center justify-center">
                     <img src="/photo.jpg" alt="Ermiyas Damte" className="rounded-full w-40 h-40 object-cover border-4 border-[var(--color-primary)] shadow-lg" />
                 </div>
-                {/* Intro Card */}
                 <div className="bg-gradient-to-br  rounded-2xl  p-8 flex flex-col gap-6 w-full max-w-xl border">
                     <p className="text-xl md:text-2xl text-[var(--color-primary)] font-semibold">
                         Hi! I’m Ermiyas <span role="img" aria-label="wave">👋</span><br/>
