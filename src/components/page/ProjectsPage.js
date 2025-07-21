@@ -88,17 +88,21 @@ export default function ProjectsPage() {
             }`}
           >
             {cat.projects.map((project) => (
-              <div key={project.id} className="bg-gradient-to-br from-[var(--color-background-2)] rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6 border-gray-50">
-                <img src={project.image} alt={project.title} className="w-32 h-32 object-cover rounded-xl border-2 border-[var(--color-primary)] shadow-md" />
-                <div className="flex-1 flex flex-col gap-2">
-                  <h4 className="text-2xl font-bold text-[var(--color-primary)]">{project.title}</h4>
-                  <p className="text-base text-gray-300 mb-2">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {project.tech.map((tech) => (
-                      <span key={tech} className="px-3 py-1 rounded-full bg-[var(--color-botton)] text-white text-xs font-medium shadow">{tech}</span>
-                    ))}
+              <div key={project.id} className="bg-gradient-to-br from-[var(--color-background-2)] rounded-2xl overflow-hidden flex flex-col md:flex-row items-stretch border-gray-50">
+                <img src={project.image} alt={project.title} className="w-full md:w-48 h-24 md:h-auto object-cover" />
+                <div className="flex-1 flex flex-col justify-between p-6">
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-2xl font-bold text-[var(--color-primary)]">{project.title}</h4>
+                    <p className="text-base text-gray-300 mb-2">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span key={tech} className="px-3 py-1 rounded-full bg-[var(--color-botton)] text-white text-xs font-medium shadow">{tech}</span>
+                      ))}
+                    </div>
                   </div>
-                  <Link to={`/projects/${project.id}`} className="self-start mt-2 px-4 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors">View Details</Link>
+                  <div className="flex justify-end mt-2">
+                    <Link to={`/projects/${project.id}`} className="px-4 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors">View Details</Link>
+                  </div>
                 </div>
               </div>
             ))}
