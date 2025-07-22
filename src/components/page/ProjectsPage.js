@@ -1,68 +1,54 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { db } from '../../config/firebase';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 
-const projectCategories = [
-  {
-    id: 'fullstack',
-    title: 'Fullstack Developer',
-    icon: '💻',
-    projects: [
-      {
-        id: '1',
-        title: 'Speech Recognition',
-        description: 'Amharic speech recognition convert amharic voice to text. which is open source any one can participate.',
-        image: '/speech.jpg',
-        tech: ['React', 'Flask', 'PostgreSQL', 'Material UI','Voice model'],
-      },
-      {
-        id: '2',
-        title: 'Portfolio Website',
-        description: 'A personal portfolio to showcase my work and skills.',
-        image: '/port.png',
-        tech: ['React','Firebase', 'Tailwind CSS'],
-      },
-    ],
-  },
-  {
-    id: 'backend',
-    title: 'Backend Developer',
-    icon: '⚙️',
-    projects: [
-      {
-        id: '3',
-        title: 'E-commerce',
-        description: 'A multi tenant based ecommerce backend.',
-        image: '/ecommerce.png',
-        tech: ['Node js','Express js','Redis','Postgresql','BullMQ','Microservice','Arif pay', 'MongoDB'],
-      },
-      {
-        id: '5',
-        title: 'Online Vacancy',
-        description: 'A vacancy system with dashboard. Where the company publish vacancy and applicant easly apply on open vacancy',
-        image: '/vacnay_1.png',
-        tech: ['Node js','Express js','Postgresql','Microservice', 'MongoDB'],
-      },
-    ],
-  },
-  {
-    id: 'uiux',
-    title: 'UI/UX Designer',
-    icon: '🎨',
-    projects: [
-      {
-        id: '4',
-        title: 'Mobile Banking App Redesign',
-        description: 'Redesigned the mobile banking app for a seamless and modern user experience.',
-        image: '/mb_kokeb.png',
-        tech: ['Figma', 'UX research', 'User Research'],
-      },
-    ],
-  },
-];
+const categoryDetails = {
+  fullstack: { title: 'Fullstack Developer', icon: '💻', order: 1 },
+  backend: { title: 'Backend Developer', icon: '⚙️', order: 2 },
+  uiux: { title: 'UI/UX Designer', icon: '🎨', order: 3 },
+};
 
 export default function ProjectsPage() {
-  const [activeTab, setActiveTab] = useState(projectCategories[0].id);
+  const [projectCategories, setProjectCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState('');
 
+  useEffect(() => {
+    const fetchProjects = async () => {
+      setLoading(true);
+      try {
+        const projectsCollection = collection(db, 'projects');
+        const q = query(projectsCollection, orderBy('order', 'asc'));
+        const projectsSnapshot = await getDocs(q);
+        const projectsData = projectsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        console.log('Projects Data:', projectsData);
+
+        const grouped = projectsData.reduce((acc, project) => {
+          const category = project.category || 'other';
+          if (!acc[category]) {
+            acc[category] = {
+              id: category,
+              title: categoryDetails[category]?.title || 'Other',
+              icon: categoryDetails[category]?.icon || '✨',
+              order: categoryDetails[category]?.order || 99,
+              projects: [],
+            };
+          }
+          acc[category].projects.push(project);
+          return acc;
+        }, {});
+        setProjectCategories(Object.values(grouped));
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProjects();
+  }, []);
+
+  console.log('Project Categories:', projectCategories);
+  
   return (
     <section className="min-h-[40vh] flex flex-col items-center justify-center pb-10 overflow-x-hidden">
       <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Projects</h2>      

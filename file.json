@@ -1,0 +1,34 @@
+{
+  "categories": {
+    "fullstack": {
+      "title": "Fullstack Developer",
+      "icon": "💻",
+      "projects": {
+        "1": {
+          "title": "Speech Recognition",
+          "description": "Amharic speech recognition convert amharic voice to text...",
+          "image": "images/speech.jpg",
+          "tech": ["React", "Flask", "PostgreSQL", "Material UI", "Voice model"]
+        },
+        "2": {
+          "title": "Portfolio Website",
+          "description": "A personal portfolio to showcase my work and skills.",
+          "image": "images/port.png",
+          "tech": ["React", "Firebase", "Tailwind CSS"]
+        }
+      }
+    },
+    "backend": {
+      "title": "Backend Developer",
+      "icon": "⚙️",
+      "projects": {
+        "3": {
+          "title": "E-commerce",
+          "description": "A multi tenant based ecommerce backend.",
+          "image": "images/ecommerce.png",
+          "tech": ["Node js", "Express js", "Redis", "Postgresql", "BullMQ", "Microservice", "Arif pay", "MongoDB"]
+        }
+      }
+    }
+  }
+}
