@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { supabase } from '../../utils/supabase';
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -8,9 +9,19 @@ export default function ContactPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const { data, error } = await supabase.from('feedback').insert([
+        { name: form.name, email: form.email, message: form.message }
+      ]);
+      if (error) throw error;
+      console.log('data', data);
+    } catch (error) {
+      console.error('Error inserting data:', error);
+    }
     setSubmitted(true);
+    setForm({ name: '', email: '', message: '' });
   };
 
   return (
