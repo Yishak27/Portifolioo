@@ -16,7 +16,10 @@ export const HomePage = () => {
                         </span>
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                        <a href="mailto:inbox@ermiyas.dev" className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] shadow hover:bg-[var(--color-button)]  text-lg">
+                        <a href="mailto:inbox@ermiyas.dev" 
+                        // className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] shadow hover:bg-[var(--color-button)]  text-lg"
+                        className=" flex  items-center gap-2 px-5 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-secondary)] font-semibold hover:bg-[var(--color-botton)] text-lg transition-colors"
+                        >
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 13.065l-11.985-7.065v14h24v-14l-12.015 7.065zm11.985-9.065h-23.97l11.985 7.065 11.985-7.065z" /></svg>
                             Get In Touch
                         </a>
@@ -25,7 +28,7 @@ export const HomePage = () => {
                             CV
                         </a>
                     </div>
-                    <div className="flex overscroll-auto items-center gap-6 mt-4">
+                    <div className="flex overscroll-x-contain items-center gap-6 mt-4">
                         <a href="https://www.linkedin.com/in/ermiyas-damte/"
                          title='LinkedIn'
                          target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-botton)] transition-colors">
