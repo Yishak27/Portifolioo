@@ -40,7 +40,7 @@ export default function App() {
       {showTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-[var(--color-primary)] text-white shadow-lg hover:bg-[var(--color-botton)] transition-colors"
+          className="fixed bottom-8 right-8 z-50 p-3 rounded-full shadow-lg bg-[var(--color-botton)] transition-colors"
           aria-label="Back to top"
         >
           <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>

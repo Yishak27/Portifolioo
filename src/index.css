@@ -32,7 +32,8 @@
   background: #111;
 }
 [data-theme='light'] {
-  --color-primary: #1A77A3;
+  /* --color-primary: #1A77A3;  */
+  --color-primary:#06457e;
   --color-secondary: #eaeaea;
   --color-tertiary: #f5f5f5;
   --color-botton: #E8A342;

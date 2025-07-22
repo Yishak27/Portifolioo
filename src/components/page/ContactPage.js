@@ -14,8 +14,8 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="w-full flex flex-col items-center justify-center px-4 py-16 bg-[var(--color-background-2)]">
-      <div className="w-full max-w-lg bg-[var(--color-background-2)] rounded-2xl shadow p-8 border border-[var(--color-secondary)] mb-8">
+    <section className="w-full flex flex-col items-center justify-center px-4 py-16">
+      <div className="w-full max-w-lg rounded-2xl shadow p-8 border border-[var(--color-secondary)] mb-8">
         <h2 className="text-3xl font-bold text-[var(--color-primary)] mb-6 text-center">Contact Me</h2>
         {submitted ? (
           <div className="text-center text-[var(--color-primary)] text-lg font-semibold py-8">
@@ -30,7 +30,7 @@ export default function ContactPage() {
               value={form.name}
               onChange={handleChange}
               required
-              className="rounded-md px-4 py-2 border border-[var(--color-tertiary)] bg-transparent text-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+              className="rounded-md px-4 py-2 border border-[var(--color-primary)] bg-transparent text-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
             />
             <input
               type="email"
@@ -39,7 +39,7 @@ export default function ContactPage() {
               value={form.email}
               onChange={handleChange}
               required
-              className="rounded-md px-4 py-2 border border-[var(--color-tertiary)] bg-transparent text-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+              className="rounded-md px-4 py-2 border border-[var(--color-primary)] bg-transparent text-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
             />
             <textarea
               name="message"
@@ -48,11 +48,12 @@ export default function ContactPage() {
               onChange={handleChange}
               required
               rows={5}
-              className="rounded-md px-4 py-2 border border-[var(--color-tertiary)] bg-transparent text-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+              className="rounded-md px-4 py-2 border border-[var(--color-primary)] bg-transparent text-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
             />
             <button
               type="submit"
-              className="mt-2 px-6 py-2 rounded-lg bg-[var(--color-primary)] text-white font-semibold hover:bg-[var(--color-botton)] transition-colors"
+              // className="mt-2 px-6 py-2 rounded-lg bg-[var(--color-primary)] font-semibold hover:bg-[var(--color-botton)] transition-colors"
+              className="items-center gap-2 mt-2 px-6 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] transition-colors hover:bg-[var(--color-botton)]  text-lg"
             >
               Send Message
             </button>
