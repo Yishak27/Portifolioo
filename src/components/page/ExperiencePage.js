@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { supabase } from '../../utils/supabase';
 
 const experiences = [
   {
@@ -67,6 +68,32 @@ const experiences = [
 ];
 
 export default function ExperiencePage() {
+
+  const [experiences, setExperiences] = useState([]);
+  const [loading, setLoading] = useState(true);
+   useEffect(()=>{
+    const fetchExperiences = async () => {
+      try {
+        setLoading(true);
+        const { data, error } = await supabase.from('experience').select('*').order('id', { ascending: false });
+        if (error) throw error;
+        setExperiences(data);
+      } catch (error) {
+        console.error('Error fetching experiences:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchExperiences();
+  }, []);
+  console.log('experiences', experiences);
+  
+
+  if (loading) {
+    return <div className="text-center text-[var(--color-primary)]">Loading...</div>;
+  }
+
   return (
     <section className="w-full min-h-[60vh] flex flex-col items-center justify-center">
       <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Experience</h2>
@@ -91,12 +118,27 @@ export default function ExperiencePage() {
                 </div>
                 {exp.description && <div className="text-[var(--color-primary)] mb-2 text-xs md:text-sm">{exp.description}</div>}
                 <ul className="list-none pl-0 text-[var(--color-primary)] text-xs md:text-sm space-y-1">
-                  {exp.highlights.map((item, idx) => (
+                  {/* {exp.highlights.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <span className="text-lg text-[var(--color-botton)] mt-0.5">›</span>
                       <span>{item}</span>
                     </li>
-                  ))}
+                  ))} */}
+                  {exp.highlights && Array.isArray(exp.highlights)
+                    ? exp.highlights.map((tech, i) => (                     
+                        <li key={i} className="flex items-start gap-2">
+                      <span className="text-lg text-[var(--color-botton)] mt-0.5">›</span>
+                      <span>{tech}</span>
+                    </li>
+                    ))
+                    : typeof exp.highlights === 'string'
+                      ? exp.highlights.split(',').map((tech, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-lg text-[var(--color-botton)] mt-0.5">›</span>
+                          <span>{tech.trim()}</span>
+                        </li>
+                      ))
+                      : null}
                 </ul>
               </div>
             </div>

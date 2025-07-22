@@ -23,7 +23,9 @@ export const HomePage = () => {
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 13.065l-11.985-7.065v14h24v-14l-12.015 7.065zm11.985-9.065h-23.97l11.985 7.065 11.985-7.065z" /></svg>
                             Get In Touch
                         </a>
-                        <a href="/Ermiyas Damte CV.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2  px-5 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] shadow hover:bg-[var(--color-primary)] hover:text-[var(--color-background-2)] transition-colors text-lg">
+                        <a href="/Ermiyas Damte CV.pdf" target="_blank" rel="noopener noreferrer" 
+                        className="flex items-center gap-2  px-5 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] shadow hover:bg-[var(--color-primary)] hover:text-[var(--color-background-2)] transition-colors text-lg"
+                        >
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-7V3.5L18.5 9H13z" /></svg>
                             CV
                         </a>
