@@ -151,9 +151,7 @@ export default function GetInTouchPage() {
                 type="submit"
                 disabled={isLoading}
                 className={`items-center gap-2 mt-2 px-6 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] transition-colors hover:bg-[var(--color-botton)] text-lg ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
-              >
-                {/* className="items-center gap-2 mt-2 px-6 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] transition-colors hover:bg-[var(--color-botton)] text-lg"
-              > */}
+              >                
                  {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
