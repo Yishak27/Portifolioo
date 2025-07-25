@@ -1,15 +1,12 @@
 
-import { Flex, Text, Button, Theme, ThickDividerHorizontalIcon, Separator } from "@radix-ui/themes";
+import { Separator } from "@radix-ui/themes";
 import NavBar from "./components/page/NavBar";
 import { HomePage } from "./components/page/HomePage";
 import { Divider } from "@mui/material";
-import { FooterPage } from "./components/page/FooterPage";
-import { Route, Routes } from "react-router-dom";
-import ProjectsPage from "./components/page/ProjectsPage";
-import ProjectDetailPage from "./components/page/ProjectDetailPage";
+import { FooterPage } from "./components/page/FooterPage"; 
+import ProjectsPage from "./components/page/ProjectsPage"; 
 import ExperiencePage from "./components/page/ExperiencePage";
-import SkillsPage from "./components/page/SkillsPage";
-import ErrorPage from "./components/page/ErrorPage";
+import SkillsPage from "./components/page/SkillsPage"; 
 import ContactPage from "./components/page/ContactPage";
 import { useEffect, useState } from 'react';
 

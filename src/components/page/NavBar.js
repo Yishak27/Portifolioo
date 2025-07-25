@@ -29,7 +29,7 @@ export default function NavBar() {
                             <a href="/Ermiyas Damte CV.pdf" target='_blank' className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">Resume</a>
                         </li>
                         <li>
-                            <a href="#contact" className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">Contact</a>
+                            <a href="/contact" className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">Contact</a>
                         </li>
                     </ul>
                 </div>            
