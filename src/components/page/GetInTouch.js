@@ -4,6 +4,7 @@ import { supabase } from '../../utils/supabase';
 export default function GetInTouchPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,6 +13,7 @@ export default function GetInTouchPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setIsLoading(true);
       const { data, error } = await supabase.from('feedback').insert([
         { name: form.name, email: form.email, message: form.message }
       ]);
@@ -19,6 +21,8 @@ export default function GetInTouchPage() {
       console.log('data', data);
     } catch (error) {
       console.error('Error inserting data:', error);
+    } finally {
+      setIsLoading(false);
     }
     setSubmitted(true);
     setForm({ name: '', email: '', message: '' });
@@ -82,16 +86,13 @@ export default function GetInTouchPage() {
   ];
 
   return (
-    <>  
-      
-      {/* button to back */}
+    <>
       <section className="w-full flex items-center justify-center py-8">
         <a href="/" className="text-[var(--color-primary)] hover:text-[var(--color-botton)] transition-colors text-lg">
           &larr; Back to Home
         </a>
       </section>
       <section className="w-full flex flex-col lg:flex-row items-center justify-center px-4 py-16 gap-8">
-        {/* Left side - Social Media Icons */}
         <div className="w-full max-w-md lg:max-w-xs rounded-2xl shadow p-8 border border-[var(--color-secondary)] mb-8 lg:mb-0">
           <h2 className="text-3xl font-bold text-[var(--color-primary)] mb-6 text-center">Find Me On</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -111,8 +112,6 @@ export default function GetInTouchPage() {
             ))}
           </div>
         </div>
-
-        {/* Right side - Contact Form */}
         <div className="w-full max-w-lg rounded-2xl shadow p-8 border border-[var(--color-secondary)]">
           <h2 className="text-3xl font-bold text-[var(--color-primary)] mb-6 text-center">Contact Me</h2>
           {submitted ? (
@@ -150,9 +149,12 @@ export default function GetInTouchPage() {
               />
               <button
                 type="submit"
-                className="items-center gap-2 mt-2 px-6 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] transition-colors hover:bg-[var(--color-botton)] text-lg"
+                disabled={isLoading}
+                className={`items-center gap-2 mt-2 px-6 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] transition-colors hover:bg-[var(--color-botton)] text-lg ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                Send Message
+                {/* className="items-center gap-2 mt-2 px-6 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] transition-colors hover:bg-[var(--color-botton)] text-lg"
+              > */}
+                 {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           )}
