@@ -43,8 +43,7 @@ export default function ProjectsPage() {
 
   return (
     <section className="min-h-[40vh] flex flex-col items-center justify-center pb-10 overflow-x-hidden">
-      <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Projects</h2>
-
+      <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Projects</h1>
       <div className="flex flex-wrap justify-center gap-4 mb-10 max-w-4xl">
         {categories.map((cat) => (
           <button

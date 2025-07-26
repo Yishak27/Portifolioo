@@ -11,7 +11,7 @@ export default function NavBar() {
         <nav className="w-full flex justify-center items-center py-2 bg-transparent">
             <div className="w-full max-w-3xl flex justify-between items-center relative px-4">
                 <div className="flex-shrink-0">
-                    <a href="/" className="font-bold text-2xl md:text-3xl">Ermiyas.dev</a>
+                    <h1 className="font-bold text-2xl md:text-3xl">Ermiyas.dev</h1>
                 </div>
                 <button
                     className="md:hidden ml-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
@@ -26,10 +26,14 @@ export default function NavBar() {
                             <a href="/" className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">Portfolio</a>
                         </li> */}
                         <li>
-                            <a href="/Ermiyas Damte CV.pdf" target='_blank' className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">Resume</a>
+                            <a href="/Ermiyas Damte CV.pdf" target='_blank' className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">
+                            <h2 className="">Resume</h2>
+                            </a>
                         </li>
                         <li>
-                            <a href="/contact" className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">Contact</a>
+                            <a href="/contact" className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">
+                            <h2 className="">Contact</h2>
+                            </a>
                         </li>
                     </ul>
                 </div>            

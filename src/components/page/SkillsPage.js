@@ -71,7 +71,7 @@ const getLevelDots = (level) => {
 export default function SkillsPage() {
   return (
     <section className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 py-12">
-      <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Skills</h2>
+      <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Skills</h1>
       <div className="flex flex-col gap-8 w-full max-w-3xl">
         {skills.map((group) => (
           <div key={group.category} className="mb-4">

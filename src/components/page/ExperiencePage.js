@@ -96,7 +96,9 @@ export default function ExperiencePage() {
 
   return (
     <section className="w-full min-h-[60vh] flex flex-col items-center justify-center">
-      <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Experience</h2>
+      <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">
+      Experience
+      </h1>
       <div className="relative w-full max-w-3xl">
         <div className="absolute left-8 top-5 h-full border-l-2 border-dashed border-gray-300 z-0" />
         <div className="flex flex-col gap-16 relative z-10">

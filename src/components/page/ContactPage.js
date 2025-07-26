@@ -27,7 +27,7 @@ export default function ContactPage() {
   return (
     <section className="w-full flex flex-col items-center justify-center px-4 py-16">
       <div className="w-full max-w-lg rounded-2xl shadow p-8 border border-[var(--color-secondary)] mb-8">
-        <h2 className="text-3xl font-bold text-[var(--color-primary)] mb-6 text-center">Contact Me</h2>
+        <h1 className="text-3xl font-bold text-[var(--color-primary)] mb-6 text-center">Contact Me</h1>
         {submitted ? (
           <div className="text-center text-[var(--color-primary)] text-lg font-semibold py-8">
             Thank you for reaching out! I'll get back to you soon.
