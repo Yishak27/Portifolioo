@@ -70,16 +70,16 @@ export const HomePage = () => {
         <section className="w-full min-h-[55vh] flex flex-col items-center justify-center px-4 py-12">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full max-w-7xl">
                 <div className="flex-shrink-0 flex items-center justify-center">
-                    <img src="/photo.jpg" alt="Ermiyas Damte" className="rounded-full w-40 h-40 object-cover border-4 border-[var(--color-primary)] shadow-lg" />
+                    <img src="/photo.webp" alt="Ermiyas Damte - Full Stack Developer" className="rounded-full w-40 h-40 object-cover border-4 border-[var(--color-primary)] shadow-lg" />
                 </div>
                 <div className="bg-gradient-to-br  rounded-2xl  p-8 flex flex-col gap-6 w-full max-w-xl">
-                    <p className="text-xl md:text-2xl text-[var(--color-primary)]">
+                    <h1 className="text-xl md:text-2xl text-[var(--color-primary)]">
                         Hi! I’m Ermiyas <span role="img" aria-label="wave">👋</span><br />
                         <span className="block mt-2 font-extrabold text-xl md:text-xl">Fullstack Developer & UI/UX Designer</span>
                         <span className="pl-0 font-normal text-[var(--color-primary)] text-xs md:text-sm space-y-1">
                             I'm a passionate full-stack developer and UI/UX designer with over 3 years of hands-on experience building enterprise-level applications for various companies. Known for my creativity, talent, and strong problem-solving skills, I consistently deliver outstanding digital solutions.
                         </span>
-                    </p>
+                    </h1>
                     <div className="flex flex-col sm:flex-row gap-4 mt-2">
                         <a href="mailto:inbox@ermiyas.dev"
                             // className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] shadow hover:bg-[var(--color-button)]  text-lg"

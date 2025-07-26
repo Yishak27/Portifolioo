@@ -17,7 +17,7 @@ root.render(
           <Route path="/" element={<App />} />
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
           <Route path="/contact" element={<GetInTouchPage />} />
-        <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
