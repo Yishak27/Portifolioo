@@ -102,6 +102,7 @@ export default function ProjectsPage() {
           <div className='flex justify-center mt-8'>
             <a href={activeTab === 'UI/UX Designer' ? 'https://dribbble.com/yishak27' : 'https://github.com/Yishak27'}
               target="_blank" rel="noopener noreferrer"
+              aria-label='More Link'
               className="flex items-center gap-2  px-5 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] shadow hover:bg-[var(--color-primary)] hover:text-[var(--color-background-2)] transition-colors text-sm"
             >
               View More on {activeTab === 'UI/UX Designer' ? 'Dribbble' : 'GitHub'}

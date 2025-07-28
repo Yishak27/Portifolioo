@@ -26,12 +26,14 @@ export default function NavBar() {
                             <a href="/" className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">Portfolio</a>
                         </li> */}
                         <li>
-                            <a href="/Ermiyas Damte CV.pdf" target='_blank' className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">
+                            <a href="/Ermiyas Damte CV.pdf"
+                            aria-label='Resume' target='_blank' className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">
                             <h2 className="">Resume</h2>
                             </a>
                         </li>
                         <li>
-                            <a href="/contact" className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">
+                            <a href="/contact"
+                             aria-label='Contact' className="nav-link py-2 md:py-0 text-sm hover:text-[var(--color-primary)]">
                             <h2 className="">Contact</h2>
                             </a>
                         </li>

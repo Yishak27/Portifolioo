@@ -97,12 +97,12 @@ export const FooterPage = () => {
             </div>
             <div className="mt-2 flex gap-4 items-center justify-center">
                 {socialLinks.map((link) => (
-                    <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer"
+                    <a key={link.name} href={link.url} aria-label='Social Media Icon of' target="_blank" rel="noopener noreferrer"
                        className="hover:text-[var(--color-botton)] transition-colors">
                         {link.icon}
                     </a>
                 ))}
-                <a href="https://www.linkedin.com/in/ermiyas-damte/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-botton)] transition-colors">
+                <a href="https://www.linkedin.com/in/ermiyas-damte/" aria-label='LinkedIn' target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-botton)] transition-colors">
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z" /></svg>
                 </a>
             </div>

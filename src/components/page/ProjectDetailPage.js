@@ -77,7 +77,9 @@ export default function ProjectDetailPage() {
           </div>
           <div className="flex gap-4 mt-4">
             {project.links.map((link) => (
-              <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors">{link.label}</a>
+              <a key={link.label}
+              aria-label='Links' href={link.url} target="_blank" rel="noopener noreferrer"
+               className="px-4 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors">{link.label}</a>
             ))}
           </div>
           {/* Navigation Buttons */}

@@ -82,13 +82,15 @@ export const HomePage = () => {
                     </h1>
                     <div className="flex flex-col sm:flex-row gap-4 mt-2">
                         <a href="mailto:inbox@ermiyas.dev"
+                        aria-label='Email'
                             // className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-background-2)] shadow hover:bg-[var(--color-button)]  text-lg"
                             className=" flex  items-center gap-2 px-5 py-2 rounded-lg bg-[var(--color-primary)] text-[var(--color-secondary)] font-semibold hover:bg-[var(--color-botton)] text-lg transition-colors"
                         >
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 13.065l-11.985-7.065v14h24v-14l-12.015 7.065zm11.985-9.065h-23.97l11.985 7.065 11.985-7.065z" /></svg>
                             Get In Touch
                         </a>
-                        <a href="/Ermiyas Damte CV.pdf" target="_blank" rel="noopener noreferrer"
+                        <a href="/Ermiyas Damte CV.pdf"
+                        aria-label='CV' target="_blank" rel="noopener noreferrer"
                             className="flex items-center gap-2  px-5 py-2 rounded-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] shadow hover:bg-[var(--color-primary)] hover:text-[var(--color-background-2)] transition-colors text-lg"
                         >
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-7V3.5L18.5 9H13z" /></svg>
@@ -98,7 +100,7 @@ export const HomePage = () => {
                     <div className="flex overscroll-x-contain items-center gap-6 mt-4">
                         {socialLikst.length >= 1 && socialLikst.map((social, index) => (
                             <a
-                                aria-label={social.name}
+                                aria-label={social.name || 'Social Media Icon'}
                                 key={index}
                                 href={social.url}
                                 title={social.name}

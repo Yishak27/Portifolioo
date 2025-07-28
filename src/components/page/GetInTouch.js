@@ -114,7 +114,7 @@ export default function GetInTouchPage() {
   return (
     <>
       <section className="w-full flex items-center justify-center py-8">
-        <a href="/" className="text-[var(--color-primary)] hover:text-[var(--color-botton)] transition-colors text-lg">
+        <a href="/" aria-label='Back to home' className="text-[var(--color-primary)] hover:text-[var(--color-botton)] transition-colors text-lg">
           &larr; Back to Home
         </a>
       </section>
@@ -128,6 +128,7 @@ export default function GetInTouchPage() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label='Social Media Links'
                 className="flex flex-col items-center justify-center gap-2 hover:text-[var(--color-botton)] transition-colors"
               >
                 <div className="w-12 h-12 flex items-center justify-center">
@@ -184,8 +185,8 @@ export default function GetInTouchPage() {
           )}
           <div className="mt-8 flex flex-col items-center gap-2 text-[var(--color-primary)]">
             <div className="font-semibold">Or reach me at:</div>
-            <a href="mailto:inbox@ermiyas.dev" className="hover:text-[var(--color-botton)] transition-colors">inbox@ermiyas.dev</a>
-            <a href="tel:+251924193077" className="hover:text-[var(--color-botton)] transition-colors">+251 924 193 077</a>
+            <a href="mailto:inbox@ermiyas.dev" aria-label='Email' className="hover:text-[var(--color-botton)] transition-colors">inbox@ermiyas.dev</a>
+            <a href="tel:+251924193077" aria-label='Phone' className="hover:text-[var(--color-botton)] transition-colors">+251 924 193 077</a>
           </div>
         </div>
       </section>
