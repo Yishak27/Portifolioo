@@ -66,7 +66,7 @@ export default function ProjectDetailPage() {
           Back
         </button>
         {/* Project Image */}
-        <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
+        <img src={project.image} alt={project.title || 'Project Image'} className="w-full h-64 object-cover" />
         <div className="p-8 flex flex-col gap-4">
           <h2 className="text-3xl font-bold text-[var(--color-primary)]">{project.title}</h2>
           <p className="text-lg text-gray-300">{project.description}</p>

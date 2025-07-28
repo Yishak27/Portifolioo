@@ -112,7 +112,7 @@ export default function ExperiencePage() {
               </div>
               <div className="flex-1 ml-20 md:ml-10 sm:ml-5 rounded-2xl p-4 md:p-6 border border-[var(--color-secondary)] mt-2">
                 <div className="flex items-center gap-3 md:gap-4 mb-2">
-                  {exp.logo && <img src={exp.logo} alt={exp.company} className="w-10 h-10 md:w-10 md:h-12 object-contain rounded bg-white p-1 border border-[var(--color-secondary)]" />}
+                  {/* {exp.logo && <img src={exp.logo} alt={exp.company || "Company Logo"} className="w-10 h-10 md:w-10 md:h-12 object-contain rounded bg-white p-1 border border-[var(--color-secondary)]" />} */}
                   <div>
                     <div className="text-base md:text-lg font-bold text-[var(--color-primary)]">{exp.role}</div>
                     <div className="text-sm md:text-base font-semibold text-[var(--color-botton)]">@{exp.company}</div>
