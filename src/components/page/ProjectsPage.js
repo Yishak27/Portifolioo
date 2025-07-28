@@ -69,7 +69,7 @@ export default function ProjectsPage() {
               </div>
               <div className="flex-1 flex flex-col justify-between md:ml-4 ml-0 border-[var(--color-tertiary)] border p-4 min-w-0">
                 <div className="flex flex-col gap-2">
-                  <h4 className="text-2xl font-bold text-[var(--color-primary)]">{project.titles}</h4>
+                  <h2 className="text-2xl font-bold text-[var(--color-primary)]">{project.titles}</h2>
                   <p className="text-base text-gray-500 mb-2 min-h-[3.5rem] line-clamp-3 overflow-hidden">{project.description}</p>
                  
                 <div className="flex flex-wrap gap-2">
