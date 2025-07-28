@@ -65,7 +65,8 @@ export default function ProjectsPage() {
             <div key={project.id} className="bg-gradient-to-br from-[var(--color-background-2)] rounded overflow-hidden flex flex-col md:flex-row items-stretch border-gray-400">
               <div className="md:w-48 w-full h-fit flex-shrink-0">
                 <img src={project.image || '/placeholder.jpg'} alt={project.title || 'Project Image' } 
-                className="w-full h-fit object-cover md:rounded-t-none md:rounded-l-2xl" />
+                className="w-full h-fit object-cover md:rounded-t-none md:rounded-l-2xl"
+                loading='lazy' />
               </div>
               <div className="flex-1 flex flex-col justify-between md:ml-4 ml-0 border-[var(--color-tertiary)] border p-4 min-w-0">
                 <div className="flex flex-col gap-2">
