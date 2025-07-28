@@ -1,13 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
 export const FooterPage = () => {
-  const [visitorCount, setVisitorCount] = useState(0);
-  useEffect(() => {
-    setVisitorCount(Math.floor(Math.random() * 4001) + 1000);
-  }, []);
-
-
-  const socialLinks = [
+   const socialLinks = [
     {
       name: "Telegram",
       url: "https://t.me/iamermi",

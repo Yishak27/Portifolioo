@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from '../themes/ThemeContext';
 

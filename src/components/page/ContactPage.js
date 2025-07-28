@@ -12,7 +12,7 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data, error } = await supabase.from('feedback').insert([
+      const { error } = await supabase.from('feedback').insert([
         { name: form.name, email: form.email, message: form.message }
       ]);
       if (error) throw error;
