@@ -75,7 +75,7 @@ export const HomePage = () => {
                 <div className="bg-gradient-to-br  rounded-2xl  p-8 flex flex-col gap-6 w-full max-w-xl">
                     <h1 className="text-xl md:text-2xl text-[var(--color-primary)]">
                         Hi! I’m Ermiyas Damte,<span role="img" aria-label="wave">👋</span><br />
-                        <span className="block mt-2 font-extrabold text-xl md:text-xl">Fullstack Developer & UI/UX Designer</span>
+                        <h2 className="block mt-2 font-extrabold text-xl md:text-xl">Fullstack Developer & UI/UX Designer</h2>
                         <span className="pl-0 font-normal text-[var(--color-primary)] text-xs md:text-sm space-y-1">
                             I'm a passionate full-stack developer and UI/UX designer with over 3 years of hands-on experience building enterprise-level applications for various companies. Known for my creativity, talent, and strong problem-solving skills, I consistently deliver outstanding digital solutions.
                         </span>
