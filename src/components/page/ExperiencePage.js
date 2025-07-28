@@ -87,7 +87,7 @@ export default function ExperiencePage() {
 
     fetchExperiences();
   }, []);
-  console.log('experiences', experiences);
+  // console.log('experiences', experiences);
   
 
   if (loading) {

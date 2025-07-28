@@ -36,7 +36,7 @@ export default function ProjectsPage() {
     fetchCategories();
     fetchProjects();
   }, []);
-  console.log('activeTab:', activeTab);
+  // console.log('activeTab:', activeTab);
   // console.log('filteredProjects:', filteredProjects);
 
   const filteredProjects = projects.filter(project => project.category === activeTab);

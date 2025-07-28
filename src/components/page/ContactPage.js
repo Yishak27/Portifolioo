@@ -16,9 +16,9 @@ export default function ContactPage() {
         { name: form.name, email: form.email, message: form.message }
       ]);
       if (error) throw error;
-      console.log('data', data);
+      // console.log('data', data);
     } catch (error) {
-      console.error('Error inserting data:', error);
+      // console.error('Error inserting data:', error);
     }
     setSubmitted(true);
     setForm({ name: '', email: '', message: '' });
