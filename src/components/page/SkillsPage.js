@@ -77,14 +77,13 @@ export default function SkillsPage() {
           <div key={group.category} className="mb-4">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">{group.icon}</span>
-              {/* <h3 className="text-sm md:text-xl font-bold text-[var(--color-primary)]">{group.category}</h3> */}
               <div className="text-base md:text-lg font-bold text-[var(--color-primary)]">{group.category}</div>
             </div>
             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {group.items.map((skill) => (
                 <li key={skill.name} className="flex flex-col rounded-md px-4 py-3 border border-[var(--color-secondary)] shadow-sm">
                   <span className="font-medium text-[var(--color-primary)] text-base mb-1">{skill.name}</span>
-                  <span className="text-xs text-gray-400">{getLevelDots(skill.level)}</span>
+                  <span className="text-xs text-gray-700">{getLevelDots(skill.level)}</span>
                 </li>
               ))}
             </ul>
