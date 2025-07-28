@@ -4,11 +4,13 @@ import NavBar from "./components/page/NavBar";
 import { HomePage } from "./components/page/HomePage";
 import { Divider } from "@mui/material";
 import { FooterPage } from "./components/page/FooterPage";
-import ProjectsPage from "./components/page/ProjectsPage";
-import ExperiencePage from "./components/page/ExperiencePage";
 import SkillsPage from "./components/page/SkillsPage";
 import ContactPage from "./components/page/ContactPage";
 import { useEffect, useState } from 'react';
+import { lazy } from "react";
+
+const ProjectsPage = lazy(() => import("./components/page/ProjectsPage"));
+const ExperiencePage = lazy(() => import("./components/page/ExperiencePage"));
 
 export default function App() {
   const [showTop, setShowTop] = useState(false);
