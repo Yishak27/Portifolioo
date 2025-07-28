@@ -70,23 +70,20 @@ const getLevelDots = (level) => {
 
 export default function SkillsPage() {
   return (
-    <section className="w-full min-h-[60vh] flex flex-col items-center justify-center px-4 py-12 bg-white text-gray-900">
-      <h1 className="text-3xl md:text-5xl font-bold text-blue-600 mb-10 text-center">Skills</h1>
+    <section className="w-full min-h-[60vh] flex flex-col items-center  bg-transparent justify-center px-4 py-12">
+      <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-primary)] mb-10 text-center">Skills</h1>
       <div className="flex flex-col gap-8 w-full max-w-3xl">
         {skills.map((group) => (
           <div key={group.category} className="mb-4">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">{group.icon}</span>
-              <div className="text-base md:text-lg font-bold text-blue-700">{group.category}</div>
+              <div className="text-base md:text-lg font-bold text-[var(--color-primary)]">{group.category}</div>
             </div>
             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {group.items.map((skill) => (
-                <li
-                  key={skill.name}
-                  className="flex flex-col rounded-md px-4 py-3 border border-gray-300 shadow-sm bg-gray-50"
-                >
-                  <span className="font-semibold text-gray-800 text-base mb-1">{skill.name}</span>
-                  <span className="text-xs text-gray-600">{getLevelDots(skill.level)}</span>
+                <li key={skill.name} className="flex flex-col rounded-md px-4 py-3 border border-[var(--color-secondary)] shadow-sm">
+                  <span className="font-medium  bg-transparent text-[var(--color-primary)] text-base mb-1">{skill.name}</span>
+                  <span className="text-xs  bg-transparent text-gray-700">{getLevelDots(skill.level)}</span>
                 </li>
               ))}
             </ul>
@@ -95,4 +92,4 @@ export default function SkillsPage() {
       </div>
     </section>
   );
-}
+} 
